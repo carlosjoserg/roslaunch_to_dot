@@ -144,10 +144,10 @@ class LaunchFile:
     ConditionalLineColor = "#ff8c00"
     CycleLineColor = "red"
     DuplicateNodeColor = "red"
-    LaunchFileColor = "#d3d3d3"
+    LaunchFileColor = "#4A4C53"
     LineColor = "black"
     MissingFileColor = "#cc0000"
-    NodeColor = "#6495ed"
+    NodeColor = "#E52A1B"
     TestNodeColor = "#009900"
 
     # Other commonly used attributes
@@ -611,6 +611,7 @@ class LaunchFile:
             graph.add_node(
                 launchNodeName,
                 label=label,
+                fontcolor="white",
                 shape="rectangle",
                 style="filled",
                 fillcolor=color)
@@ -668,8 +669,8 @@ class LaunchFile:
 
                 # Update the color of the node in the event that the
                 # file is not found
-                color = ''
-                style = ''
+                color = '#FEC900'
+                style = 'filled'
                 if not exists(rosParam.filename):
                     style = "filled"
                     color = self.MissingFileColor
